@@ -1,7 +1,26 @@
 public class Student {
+    private int studentId;
     private String name;
-    private double ipk;
-    private int age;
+    private String ssn;
+    private double gpa;
+    public final int SCHCODE = 34958;
+
+    public Student(){}
+
+    public Student(int studentId, String name, String ssn, double gpa){
+        this.studentId = studentId;
+        this.name = name;
+        this.ssn = ssn;
+        this.gpa = gpa;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
     public String getName() {
         return name;
@@ -11,19 +30,27 @@ public class Student {
         this.name = name;
     }
 
-    public double getIpk() {
-        return ipk;
+    public String getSsn() {
+        return ssn;
     }
 
-    public void setIpk(double ipk) {
-        this.ipk = ipk;
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
     }
 
-    public int getAge() {
-        return age;
+    public double getGpa() {
+        return gpa;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
+    public String toString(){
+        return "Student Id: "+ getStudentId() +
+                " Student Name: "+ getName() +
+                " Student SSN: " + getSsn() +
+                " Student GPA: " + getGpa() +
+                " School Code: " + SCHCODE;
     }
 }
