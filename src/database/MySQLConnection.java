@@ -17,7 +17,8 @@ public class MySQLConnection {
 	    
 	    try {
 			Class.forName(driver);
-		    String query = "SELECT * FROM Student;";
+		    String query = "SELECT Nama FROM lecture;";
+//            String query = "SELECT * FROM student;";
 			try(Connection con = DriverManager.getConnection(url, user, password);
 			   Statement st = con.createStatement();
 			   ResultSet rs = st.executeQuery(query)) {
